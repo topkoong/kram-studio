@@ -1,5 +1,6 @@
 <script lang="ts">
 	// import Counter from '$lib/Counter.svelte';
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -12,7 +13,7 @@
 > -->
 <section class="container">
 	<div class="flex justify-center">
-		<img src="/images/ape-shit.jpeg" alt="Welcome" />
+		<img src="{base}/images/ape-shit.jpeg" alt="Welcome" />
 	</div>
 	<h1 class="text-xl md:text-3xl font-bold text-center">Make some noise, explore a new sound!</h1>
 </section>

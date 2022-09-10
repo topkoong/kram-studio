@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+	import { base } from '$app/paths';
 </script>
 
 <header>
@@ -26,14 +27,14 @@
 	<nav data-sveltekit-prefetch class="container py-4 md:py-8 ">
 		<h1 class="text-2xl md:text-4xl text-center uppercase">KRAM Studio</h1>
 		<ul class="flex justify-center uppercase my-2">
-			<li class="text-sm md:text-lg mx-2"><a href="/">Home</a></li>
-			<li class="text-sm md:text-lg mx-2"><a href="/services">Services</a></li>
-			<li class="text-sm md:text-lg mx-2"><a href="/studios">Studios</a></li>
+			<li class="text-sm md:text-lg mx-2"><a href="{base}/">Home</a></li>
+			<li class="text-sm md:text-lg mx-2"><a href="{base}/services">Services</a></li>
+			<li class="text-sm md:text-lg mx-2"><a href="{base}/studios">Studios</a></li>
 			<li class="hidden md:block text-sm md:text-lg mx-2">
-				<a href="/about-us">About Us</a>
+				<a href="{base}/about-us">About Us</a>
 			</li>
-			<li class="hidden md:block text-sm md:text-lg mx-2"><a href="/faq">Faq</a></li>
-			<li class="text-sm md:text-lg mx-2"><a href="/contact-us">Contact Us</a></li>
+			<li class="hidden md:block text-sm md:text-lg mx-2"><a href="{base}/faq">Faq</a></li>
+			<li class="text-sm md:text-lg mx-2"><a href="{base}/contact-us">Contact Us</a></li>
 		</ul>
 	</nav>
 
