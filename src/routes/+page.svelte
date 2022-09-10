@@ -5,7 +5,10 @@
 
 <svelte:head>
 	<title>Kram Studio</title>
-	<meta name="description" content="Kram Studio" />
+	<meta
+		name="description"
+		content="Kram Studio รับ Editing, Mixing, Mastering เพลง ด้วยอุปกรณ์คุณภาพสูง รับผลิต Beat ดนตรีสมัยใหม่หลากหลายแนว มีผลงานทำให้ศิลปินมากมาย"
+	/>
 </svelte:head>
 
 <!-- <section

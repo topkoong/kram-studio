@@ -4,6 +4,25 @@
 	import FacebookIcon from '$lib/icons/facebook.svg';
 	import InstagramIcon from '$lib/icons/instagram.svg';
 	import YouTubeIcon from '$lib/icons/youtube.svg';
+	function getMobileOperatingSystem() {
+		const userAgent = navigator.userAgent || navigator.vendor;
+
+		// Windows Phone must come first because its UA also contains "Android"
+		if (/windows phone/i.test(userAgent)) {
+			return 'Windows Phone';
+		}
+
+		if (/android/i.test(userAgent)) {
+			return 'Android';
+		}
+
+		// iOS detection from: http://stackoverflow.com/a/9039885/177710
+		if (/iPad|iPhone|iPod/.test(userAgent)) {
+			return 'iOS';
+		}
+
+		return 'unknown';
+	}
 </script>
 
 <svelte:head>
@@ -23,9 +42,21 @@
 	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
 	<ul class="flex justify-center">
 		<li class=""><LineIcon class="w-8 h-8 mx-2" /></li>
-		<li class=""><FacebookIcon class="w-8 h-8 mx-2" /></li>
-		<li class=""><InstagramIcon class="w-8 h-8 mx-2" /></li>
-		<li class=""><YouTubeIcon class="w-8 h-8 mx-2" /></li>
+		<li class="">
+			<a
+				href={getMobileOperatingSystem() === 'iOS'
+					? 'fb://profile/100702638827648'
+					: 'fb://page/100702638827648'}><FacebookIcon class="w-8 h-8 mx-2" /></a
+			>
+		</li>
+		<li class="">
+			<a href="instagram://user?username=kramamr"><InstagramIcon class="w-8 h-8 mx-2" /></a>
+		</li>
+		<li class="">
+			<a href="https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg"
+				><YouTubeIcon class="w-8 h-8 mx-2" /></a
+			>
+		</li>
 	</ul>
 </section>
 
