@@ -7,8 +7,9 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"lint:fix": "eslint ./src --ext .svelte,.ts --fix --ignore-path ./.gitignore",
+		"lint:format": "prettier --write --plugin-search-dir=. .",
+		"lint": "pnpm lint:format && pnpm lint:fix"
 	},
 	"devDependencies": {
 		"@poppanator/sveltekit-svg": "^1.0.0",
