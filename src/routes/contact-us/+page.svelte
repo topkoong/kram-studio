@@ -4,6 +4,8 @@
 	import FacebookIcon from '$lib/icons/facebook.svg';
 	import InstagramIcon from '$lib/icons/instagram.svg';
 	import YouTubeIcon from '$lib/icons/youtube.svg';
+	import MediaQuery from '$lib/components/MediaQuery.svelte';
+
 	function getMobileOperatingSystem() {
 		const userAgent = navigator.userAgent || navigator.vendor;
 
@@ -43,19 +45,33 @@
 	<ul class="flex justify-center">
 		<li class=""><LineIcon class="w-8 h-8 mx-2" /></li>
 		<li class="">
-			<a
-				href={getMobileOperatingSystem() === 'iOS'
-					? 'fb://profile/100702638827648'
-					: 'fb://page/100702638827648'}><FacebookIcon class="w-8 h-8 mx-2" /></a
-			>
+			<MediaQuery query="(min-width: 1280px)" let:matches>
+				{#if matches}
+					<a href="https://www.facebook.com/100702638827648"
+						><FacebookIcon class="w-8 h-8 mx-2" /></a
+					>
+				{:else}
+					<a
+						href={getMobileOperatingSystem() === 'iOS'
+							? 'fb://profile/100702638827648'
+							: 'fb://page/100702638827648'}><FacebookIcon class="w-8 h-8 mx-2" /></a
+					>
+				{/if}
+			</MediaQuery>
 		</li>
 		<li class="">
-			<a href="instagram://user?username=kramamr"><InstagramIcon class="w-8 h-8 mx-2" /></a>
+			<MediaQuery query="(min-width: 1280px)" let:matches>
+				{#if matches}
+					<a href="https://www.instagram.com/kramamr"><FacebookIcon class="w-8 h-8 mx-2" /></a>
+				{:else}
+					<a href="instagram://user?username=kramamr"><InstagramIcon class="w-8 h-8 mx-2" /></a>
+				{/if}
+			</MediaQuery>
 		</li>
 		<li class="">
-			<a href="https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg"
-				><YouTubeIcon class="w-8 h-8 mx-2" /></a
-			>
+			<a href="https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg">
+				<YouTubeIcon class="w-8 h-8 mx-2" />
+			</a>
 		</li>
 	</ul>
 </section>
