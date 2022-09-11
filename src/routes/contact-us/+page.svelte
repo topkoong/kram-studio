@@ -4,8 +4,7 @@
 	import FacebookIcon from '$lib/icons/facebook.svg';
 	import InstagramIcon from '$lib/icons/instagram.svg';
 	import YouTubeIcon from '$lib/icons/youtube.svg';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
-
+	import MediaQuery from 'svelte-media-queries';
 	function getMobileOperatingSystem() {
 		const userAgent = navigator.userAgent || navigator.vendor;
 
