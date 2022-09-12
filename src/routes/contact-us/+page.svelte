@@ -61,7 +61,7 @@
 		<li class="">
 			<MediaQuery query="(min-width: 1280px)" let:matches>
 				{#if matches}
-					<a href="https://www.instagram.com/kramamr"><FacebookIcon class="w-8 h-8 mx-2" /></a>
+					<a href="https://www.instagram.com/kramamr"><InstagramIcon class="w-8 h-8 mx-2" /></a>
 				{:else}
 					<a href="instagram://user?username=kramamr"><InstagramIcon class="w-8 h-8 mx-2" /></a>
 				{/if}

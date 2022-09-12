@@ -16,7 +16,16 @@
 	<h2 class="text-center">Content is coming soon</h2>
 </section>
 <section class="container my-8">
-	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
+	<p class="text-xs md:text-sm lg:text-base">
+		Established in May 2020, Kram Studio has represented the best there is in creative music, sound
+		recording and podcast production.
+	</p>
+	<p class="text-xs mt-8 md:text-sm lg:text-base">
+		Our state-of-the-art recording studios and highly talented dedicated team allow us to serve your
+		creative needs throughout the entire audio production process. With decades of experience, the
+		latest equipment, and exceptional audio engineering expertise, we will give your project the
+		creative edge it deserves.
+	</p>
 </section>
 
 <style>

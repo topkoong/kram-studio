@@ -25,7 +25,9 @@
 		</svg>
 	</nav> -->
 	<nav data-sveltekit-prefetch class="container py-4 md:py-8 ">
-		<h1 class="text-2xl md:text-4xl text-center uppercase">KRAM Studio</h1>
+		<h1 class="text-2xl md:text-4xl text-center uppercase animate-bounce duration-700">
+			KRAM Studio
+		</h1>
 		<ul class="flex justify-center uppercase my-2">
 			<li class="text-sm md:text-lg mx-2"><a href="{base}/">Home</a></li>
 			<li class="text-sm md:text-lg mx-2"><a href="{base}/services">Services</a></li>

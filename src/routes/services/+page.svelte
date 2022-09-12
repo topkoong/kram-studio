@@ -1,11 +1,13 @@
 <script lang="ts">
-	// import Counter from '$lib/Counter.svelte';
+	import { fly } from 'svelte/transition';
 	const services: string[] = [
-		'RECORDING, MIXING & MASTERING',
+		'RECORDING, MIXING & MASTERING, EDITING',
 		'PRODUCTION & SOUND DESIGN',
 		'SONGWRITING & COMPOSITION',
+		'MIDI PROGRAMMING',
 		'IN-STUDIO VIDEO',
-		'JINGLES, AUDIO LOGOS & RADIO ADS'
+		'JINGLES, AUDIO LOGOS & RADIO ADS',
+		'PODCASTS'
 	];
 </script>
 
@@ -21,8 +23,10 @@
 <section class="container">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8">RECORDING STUDIO SERVICES</h1>
 	<ul class="text-left px-4">
-		{#each services as service}
-			<li class="text-sm md:text-lg">{service}</li>
+		{#each services as service, idx}
+			<li class="text-sm md:text-lg" in:fly={{ x: 500, y: 0, duration: 1000, delay: 1000 * idx }}>
+				{service}
+			</li>
 		{/each}
 	</ul>
 </section>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import Counter from '$lib/Counter.svelte';
+	import { fly } from 'svelte/transition';
 	const faqs: string[] = [
 		'What is the rate for studio time?',
 		'Is it possible to pay a flat rate per song?',
@@ -25,7 +25,10 @@
 </section>
 <section class="container my-8">
 	<ul class="text-left px-4">
-		{#each faqs as faq}<li class="text-sm md:text-lg">
+		{#each faqs as faq, idx}<li
+				class="text-sm md:text-lg"
+				in:fly={{ x: 500, y: 0, duration: 1000, delay: 1000 * idx }}
+			>
 				{faq}
 			</li>
 		{/each}
