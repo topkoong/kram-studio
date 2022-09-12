@@ -36,7 +36,10 @@
 	</h1>
 	<ul class="text-left px-4">
 		{#each services as service, idx}
-			<li class="text-sm md:text-lg" in:fly={{ x: 500, y: 0, duration: 1000, delay: 1000 * idx }}>
+			<li
+				class="my-8 text-sm md:text-lg"
+				in:fly={{ x: 200, y: 0, duration: 1000, delay: 500 * idx }}
+			>
 				{service}
 			</li>
 		{/each}

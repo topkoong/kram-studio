@@ -56,7 +56,7 @@
 
 <section class="container overflow-hidden w-full">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8 uppercase">Studios</h1>
-	<p class="text-center text-sm md:text-lg">
+	<p class="text-center text-sm md:text-lg" in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}>
 		Kram Studio was designed from the ground up as a no-compromise mastering facility. High-end
 		custom equipment and rooms based on the most perfectly optimized acoustical ratios. The main
 		suite is an enormous 30+ foot long room to allow the most natural and precise sonic environment
@@ -67,50 +67,90 @@
 	class="container my-8 grid grid-cols-1 sm:gap-2 sm:grid-cols-2 md:gap-4 md:grid-cols-4 lg:grid-cols-5 lg:gap-8 w-full"
 >
 	<div class="w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Hardware</h2>
+		<h2
+			class="text-base lg:text-lg uppercase my-8 font-semibold"
+			in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}
+		>
+			Hardware
+		</h2>
 		<ul class="pl-8">
-			{#each hardwares as hardware}
-				<li class="md:list-disc text-sm md:text-lg my-2">
+			{#each hardwares as hardware, idx}
+				<li
+					class="text-sm md:text-lg my-8"
+					in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 * idx }}
+				>
 					{hardware}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Software</h2>
+		<h2
+			class="text-base lg:text-lg uppercase my-8 font-semibold"
+			in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}
+		>
+			Software
+		</h2>
 		<ul class="pl-8">
-			{#each softwares as software}
-				<li class="md:list-disc text-sm md:text-lg my-2">
+			{#each softwares as software, idx}
+				<li
+					class="text-sm md:text-lg my-8"
+					in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 * idx }}
+				>
 					{software}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Microphones</h2>
+		<h2
+			class="text-base lg:text-lg uppercase my-8 font-semibold"
+			in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}
+		>
+			Microphones
+		</h2>
 		<ul class="pl-8">
-			{#each microphones as microphone}
-				<li class="md:list-disc text-sm md:text-lg my-2">
+			{#each microphones as microphone, idx}
+				<li
+					class="text-sm md:text-lg my-8"
+					in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 * idx }}
+				>
 					{microphone}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Keyboards</h2>
+		<h2
+			class="text-base lg:text-lg uppercase my-8 font-semibold"
+			in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}
+		>
+			Keyboards
+		</h2>
 		<ul class="pl-8">
-			{#each keyboards as keyboard}
-				<li class="md:list-disc text-sm md:text-lg my-2">
+			{#each keyboards as keyboard, idx}
+				<li
+					class="text-sm md:text-lg my-8"
+					in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 * idx }}
+				>
 					{keyboard}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Monitors</h2>
+		<h2
+			class="text-base lg:text-lg uppercase my-8 font-semibold"
+			in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 }}
+		>
+			Monitors
+		</h2>
 		<ul class="pl-4">
-			{#each monitors as monitor}
-				<li class="md:list-disc text-sm md:text-lg my-2">
+			{#each monitors as monitor, idx}
+				<li
+					class="text-sm md:text-lg my-8"
+					in:fly={{ x: 10, y: 0, duration: 1000, delay: 100 * idx }}
+				>
 					{monitor}
 				</li>
 			{/each}

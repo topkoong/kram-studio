@@ -25,3 +25,9 @@ declare module '*.svg?url' {
 	const content: string;
 	export default content;
 }
+
+declare global {
+	interface Window {
+		initMap: () => void;
+	}
+}

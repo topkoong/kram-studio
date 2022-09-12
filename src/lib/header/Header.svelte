@@ -33,7 +33,7 @@
 					? 'underline underline-offset-8 decoration-4 decoration-[#71CC00]'
 					: ''} text-sm md:text-lg mx-2"
 			>
-				<a href={base}>Home</a>
+				<a href="{base}/">Home</a>
 			</li>
 			<li
 				class="{$page.url.pathname === `${base}/services`

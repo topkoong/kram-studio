@@ -1,7 +1,7 @@
 <script lang="ts">
-	// import Counter from '$lib/Counter.svelte';
 	import { base } from '$app/paths';
 	import { fly, fade } from 'svelte/transition';
+	import { tweened } from '$lib/discreteTween';
 	import { onMount, tick } from 'svelte';
 	const texts = [
 		'Where words fail, music speaks.',
@@ -21,18 +21,24 @@
 		'Our mixing makes memories for maximum impact. Music is essential so let it reach its full potential. We can make it great.',
 		'In addition to tracking and mixing, Kram Studio can produce your sound with customised production/beat production, tracking, mastering & mixing.'
 	];
+	const randomTextEffect = tweened({ values: texts, duration: 5000 });
 
 	let loaded = false;
 	let randomText: string = '';
+
 	onMount(() => {
 		randomizeTexts();
 	});
 
 	async function randomizeTexts() {
 		loaded = false;
+		randomTextEffect.run();
 		randomText = texts[Math.floor(Math.random() * texts.length)];
 		await tick();
-		loaded = true;
+		setTimeout(() => {
+			loaded = true;
+			randomTextEffect.reset();
+		}, 5000);
 	}
 </script>
 
@@ -52,16 +58,17 @@
 		<img src="{base}/images/ape-shit.jpeg" alt="Welcome" />
 	</div>
 	<div class="flex flex-col justify-center">
-		{#if loaded}
-			<h1
-				class="text-xl md:text-3xl font-bold text-center"
-				in:fly={{ y: 200, duration: 500 }}
-				out:fade
-			>
+		<h1
+			class="text-xl md:text-3xl font-bold text-center"
+			in:fly={{ y: 200, duration: 500 }}
+			out:fade
+		>
+			{#if loaded}
 				{randomText}
-			</h1>
-		{/if}
-
+			{:else}
+				{$randomTextEffect}
+			{/if}
+		</h1>
 		<button
 			class="mx-auto border border-white max-w-xs border-4 mt-8 px-4 py-3 text-center text-sm font-semibold uppercase text-white"
 			on:click={randomizeTexts}>Get Random Quotes</button

@@ -5,9 +5,9 @@
 	import InstagramIcon from '$lib/icons/instagram.svg';
 	import YouTubeIcon from '$lib/icons/youtube.svg';
 	import MediaQuery from 'svelte-media-queries';
+	import { onMount } from 'svelte';
 	function getMobileOperatingSystem() {
 		const userAgent = navigator.userAgent || navigator.vendor;
-
 		// Windows Phone must come first because its UA also contains "Android"
 		if (/windows phone/i.test(userAgent)) {
 			return 'Windows Phone';
@@ -24,6 +24,14 @@
 
 		return 'unknown';
 	}
+	// let map: google.maps.Map;
+	// let container: any;
+	// onMount(() => {
+	// 	map = new google.maps.Map(container as HTMLElement, {
+	// 		center: { lat: -34.397, lng: 150.644 },
+	// 		zoom: 8
+	// 	});
+	// });
 </script>
 
 <svelte:head>
@@ -32,6 +40,10 @@
 		name="description"
 		content="https://www.facebook.com/100702638827648, https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg, https://www.instagram.com/kramamr"
 	/>
+	<!-- <script
+		src="https://maps.googleapis.com/maps/api/js?key=${import.meta.env
+			.VITE_GOOGLE_MAPS_API_KEY}&v=weekly"
+		defer></script> -->
 </svelte:head>
 
 <!-- <section
@@ -40,9 +52,11 @@
 <!-- ref: https://resonatemusic.ca/recording-studio/recording-studio-services/ -->
 <section class="container">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8 uppercase">Stay in the loop</h1>
-	<h1 class="text-lg md:text-2xl font-bold text-center my-8">Location section - coming soon</h1>
-	<h2 class="text-center">Googlemap is coming soon</h2>
 </section>
+
+<!-- <section class="container my-8 overflow-hidden">
+	<div id="map" bind:this={container} />
+</section> -->
 <section class="container my-8 overflow-hidden">
 	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
 	<ul class="flex justify-center">

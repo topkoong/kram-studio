@@ -6,6 +6,7 @@ specifiers:
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': next
   '@types/cookie': ^0.5.1
+  '@types/google.maps': ^3.50.0
   '@typescript-eslint/eslint-plugin': ^5.27.0
   '@typescript-eslint/parser': ^5.27.0
   autoprefixer: ^10.4.8
@@ -33,6 +34,7 @@ devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': 1.0.0-next.480_svelte@3.50.1+vite@3.1.0
   '@types/cookie': 0.5.1
+  '@types/google.maps': 3.50.0
   '@typescript-eslint/eslint-plugin': 5.36.2_2l2r3i3lm6jysqd4ac3ql4n2mm
   '@typescript-eslint/parser': 5.36.2_itqs5654cmlnjraw6gjzqacppi
   autoprefixer: 10.4.8_postcss@8.4.16
@@ -295,6 +297,10 @@ packages:
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+    dev: true
+
+  /@types/google.maps/3.50.0:
+    resolution: {integrity: sha512-8SQJKelTTt2ah7WDNWd2DZgUrqNaZw6sAFiTxmEtFql5Mzx2qfBIUdp5XwC4JbYy/AjJQT5wEBLwtwuOjBTOYg==}
     dev: true
 
   /@types/json-schema/7.0.11:

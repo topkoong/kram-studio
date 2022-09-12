@@ -26,8 +26,8 @@
 <section class="container my-8">
 	<ul class="text-left px-4">
 		{#each faqs as faq, idx}<li
-				class="text-sm md:text-lg"
-				in:fly={{ x: 500, y: 0, duration: 1000, delay: 1000 * idx }}
+				class="my-8 text-sm md:text-lg"
+				in:fly={{ x: 100, y: 0, duration: 1000, delay: 500 * idx }}
 			>
 				{faq}
 			</li>

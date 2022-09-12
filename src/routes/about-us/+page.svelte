@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	// import Counter from '$lib/Counter.svelte';
 </script>
 
@@ -16,11 +17,14 @@
 	<h2 class="text-center">Content is coming soon</h2>
 </section>
 <section class="container my-8">
-	<p class="text-xs md:text-sm lg:text-base">
+	<p class="text-xs md:text-sm lg:text-base" in:fly={{ x: 200, y: 0, duration: 1000, delay: 500 }}>
 		Established in May 2020, Kram Studio has represented the best there is in creative music, sound
 		recording and podcast production.
 	</p>
-	<p class="text-xs mt-8 md:text-sm lg:text-base">
+	<p
+		class="text-xs mt-8 md:text-sm lg:text-base"
+		in:fly={{ x: 200, y: 0, duration: 1000, delay: 1000 }}
+	>
 		Our state-of-the-art recording studios and highly talented dedicated team allow us to serve your
 		creative needs throughout the entire audio production process. With decades of experience, the
 		latest equipment, and exceptional audio engineering expertise, we will give your project the
