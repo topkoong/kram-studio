@@ -66,9 +66,9 @@
 <section
 	class="container my-8 grid grid-cols-1 sm:gap-2 sm:grid-cols-2 md:gap-4 md:grid-cols-4 lg:grid-cols-5 lg:gap-8 w-full"
 >
-	<div class="text-center sm:text-left w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8">Hardware</h2>
-		<ul>
+	<div class="w-full">
+		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Hardware</h2>
+		<ul class="pl-8">
 			{#each hardwares as hardware}
 				<li class="md:list-disc text-sm md:text-lg my-2">
 					{hardware}
@@ -76,9 +76,9 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="text-center sm:text-left w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8">Software</h2>
-		<ul>
+	<div class="w-full">
+		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Software</h2>
+		<ul class="pl-8">
 			{#each softwares as software}
 				<li class="md:list-disc text-sm md:text-lg my-2">
 					{software}
@@ -86,9 +86,9 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="text-center sm:text-left w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8">Microphones</h2>
-		<ul>
+	<div class="w-full">
+		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Microphones</h2>
+		<ul class="pl-8">
 			{#each microphones as microphone}
 				<li class="md:list-disc text-sm md:text-lg my-2">
 					{microphone}
@@ -96,9 +96,9 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="text-center sm:text-left w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8">Keyboards</h2>
-		<ul>
+	<div class="w-full">
+		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Keyboards</h2>
+		<ul class="pl-8">
 			{#each keyboards as keyboard}
 				<li class="md:list-disc text-sm md:text-lg my-2">
 					{keyboard}
@@ -106,9 +106,9 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="text-center sm:text-left w-full">
-		<h2 class="text-base lg:text-lg uppercase my-8">Monitors</h2>
-		<ul>
+	<div class="w-full">
+		<h2 class="text-base lg:text-lg uppercase my-8 font-semibold">Monitors</h2>
+		<ul class="pl-4">
 			{#each monitors as monitor}
 				<li class="md:list-disc text-sm md:text-lg my-2">
 					{monitor}
