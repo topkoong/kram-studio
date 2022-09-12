@@ -19,7 +19,7 @@
 	class="flex flex-col items-center justify-center mt-4 lg:mt-6 mb-10 lg:mb-12 max-w-[1440px] py-10 lg:py-20 lg:mx-10"
 > -->
 <!-- ref: https://resonatemusic.ca/recording-studio/recording-studio-services/ -->
-<section class="container">
+<section class="containe overflow-hidden">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8 uppercase">Studios</h1>
 	<h2 class="text-center">Content is coming soon</h2>
 </section>

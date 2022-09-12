@@ -27,8 +27,11 @@
 </script>
 
 <svelte:head>
-	<title>Kram Studio Services</title>
-	<meta name="description" content="Kram Studio Services" />
+	<title>We help grow your business rapidly</title>
+	<meta
+		name="description"
+		content="https://www.facebook.com/100702638827648, https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg, https://www.instagram.com/kramamr"
+	/>
 </svelte:head>
 
 <!-- <section
@@ -36,10 +39,11 @@
 > -->
 <!-- ref: https://resonatemusic.ca/recording-studio/recording-studio-services/ -->
 <section class="container">
+	<h1 class="text-lg md:text-2xl font-bold text-center my-8 uppercase">Stay in the loop</h1>
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8">Location section - coming soon</h1>
 	<h2 class="text-center">Googlemap is coming soon</h2>
 </section>
-<section class="container my-8">
+<section class="container my-8 overflow-hidden">
 	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
 	<ul class="flex justify-center">
 		<li class=""><LineIcon class="w-8 h-8 mx-2" /></li>
