@@ -1,5 +1,13 @@
 <script lang="ts">
 	// import Counter from '$lib/Counter.svelte';
+	const faqs: string[] = [
+		'What is the rate for studio time?',
+		'Is it possible to pay a flat rate per song?',
+		'Can you make me a custom beat or do I have to just pick a pre-made one?',
+		'Do you only record musicians with previous studio experience?',
+		`I’m thinking of surprising a friend with some studio time. What would be the best way to do
+			this?`
+	];
 </script>
 
 <svelte:head>
@@ -17,18 +25,10 @@
 </section>
 <section class="container my-8">
 	<ul class="text-left px-4">
-		<li class="text-sm md:text-lg">What is the rate for studio time?</li>
-		<li class="text-sm md:text-lg">Is it possible to pay a flat rate per song?</li>
-		<li class="text-sm md:text-lg">
-			Can you make me a custom beat or do I have to just pick a pre-made one?
-		</li>
-		<li class="text-sm md:text-lg">
-			Do you only record musicians with previous studio experience?
-		</li>
-		<li class="text-sm md:text-lg">
-			I’m thinking of surprising a friend with some studio time. What would be the best way to do
-			this?
-		</li>
+		{#each faqs as faq}<li class="text-sm md:text-lg">
+				{faq}
+			</li>
+		{/each}
 	</ul>
 </section>
 

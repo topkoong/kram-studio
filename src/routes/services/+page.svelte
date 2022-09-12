@@ -1,5 +1,12 @@
 <script lang="ts">
 	// import Counter from '$lib/Counter.svelte';
+	const services: string[] = [
+		'RECORDING, MIXING & MASTERING',
+		'PRODUCTION & SOUND DESIGN',
+		'SONGWRITING & COMPOSITION',
+		'IN-STUDIO VIDEO',
+		'JINGLES, AUDIO LOGOS & RADIO ADS'
+	];
 </script>
 
 <svelte:head>
@@ -14,11 +21,9 @@
 <section class="container">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8">RECORDING STUDIO SERVICES</h1>
 	<ul class="text-left px-4">
-		<li class="text-sm md:text-lg">RECORDING, MIXING & MASTERING</li>
-		<li class="text-sm md:text-lg">PRODUCTION & SOUND DESIGN</li>
-		<li class="text-sm md:text-lg">SONGWRITING & COMPOSITION</li>
-		<li class="text-sm md:text-lg">IN-STUDIO VIDEO</li>
-		<li class="text-sm md:text-lg">JINGLES, AUDIO LOGOS & RADIO ADS</li>
+		{#each services as service}
+			<li class="text-sm md:text-lg">{service}</li>
+		{/each}
 	</ul>
 </section>
 
