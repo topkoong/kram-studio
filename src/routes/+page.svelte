@@ -21,7 +21,7 @@
 		'Our mixing makes memories for maximum impact. Music is essential so let it reach its full potential. We can make it great.',
 		'In addition to tracking and mixing, Kram Studio can produce your sound with customised production/beat production, tracking, mastering & mixing.'
 	];
-	const randomTextEffect = tweened({ values: texts, duration: 5000 });
+	const randomTextEffect = tweened({ values: texts, duration: 10000 });
 
 	let loaded = false;
 	let randomText: string = '';
@@ -50,9 +50,6 @@
 	/>
 </svelte:head>
 
-<!-- <section
-	class="flex flex-col items-center justify-center mt-4 lg:mt-6 mb-10 lg:mb-12 max-w-[1440px] py-10 lg:py-20 lg:mx-10"
-> -->
 <section class="container">
 	<div class="flex justify-center">
 		<img src="{base}/images/ape-shit.jpeg" alt="Welcome" />
