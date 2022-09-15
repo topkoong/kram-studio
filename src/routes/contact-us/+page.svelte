@@ -7,6 +7,7 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+
 	const google = window.google;
 	function getMobileOperatingSystem() {
 		if (browser) {
