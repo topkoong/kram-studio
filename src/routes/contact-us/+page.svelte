@@ -57,17 +57,27 @@
 </script>
 
 <svelte:head>
-	<title>We help grow your business rapidly</title>
+	<title>KRAM Studio - We help grow your business rapidly</title>
+	<meta name="description" content="RECORDING, MIXING & MASTERING, EDITING" />
 	<meta
-		name="description"
-		content="https://www.facebook.com/100702638827648, https://www.youtube.com/channel/UCRfq6suvqwv6-Eu-tE6k3tg, https://www.instagram.com/kramamr"
+		name="title"
+		content="Kram Studio Services - 
+	RECORDING, MIXING & MASTERING, EDITING, SONGWRITING & COMPOSITION, MIDI PROGRAMMING, JINGLES, AUDIO LOGOS & RADIO ADS"
 	/>
-
 	<script
 		async
 		defer
 		src="https://maps.googleapis.com/maps/api/js?key={import.meta.env
 			.VITE_GOOGLE_MAP_API_KEY}"></script>
+
+	<meta
+		property="og:title"
+		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
+	/>
+	<meta
+		property="og:description"
+		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
+	/>
 </svelte:head>
 
 <!-- <section

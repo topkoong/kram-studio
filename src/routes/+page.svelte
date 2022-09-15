@@ -45,8 +45,21 @@
 <svelte:head>
 	<title>Kram Studio</title>
 	<meta
+		name="title"
+		content="Kram Studio Services - 
+	RECORDING, MIXING & MASTERING, EDITING, SONGWRITING & COMPOSITION, MIDI PROGRAMMING, JINGLES, AUDIO LOGOS & RADIO ADS"
+	/>
+	<meta
 		name="description"
 		content="Kram Studio รับ Editing, Mixing, Mastering เพลง ด้วยอุปกรณ์คุณภาพสูง รับผลิต Beat ดนตรีสมัยใหม่หลากหลายแนว มีผลงานทำให้ศิลปินมากมาย Your music is unique, don't try to sound like someone else. Free Mix Evaluation! Free Mix Consultation!"
+	/>
+	<meta
+		property="og:title"
+		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
+	/>
+	<meta
+		property="og:description"
+		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
 	/>
 </svelte:head>
 
