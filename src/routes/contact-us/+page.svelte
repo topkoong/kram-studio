@@ -34,7 +34,6 @@
 	onMount(() => {
 		/*global google*/
 		if (browser) {
-			const google = window.google;
 			// @ts-ignore
 			let map: google.maps.Map;
 			// @ts-ignore
