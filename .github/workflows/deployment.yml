@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+          cache: pnpm
 
       - name: Installing pnpm
         uses: pnpm/action-setup@v2.2.2
@@ -34,7 +35,7 @@ jobs:
             - args: [--global, gulp, prettier, typescript]
 
       - name: Installing Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: 'Create env file'
         run: |
@@ -48,7 +49,7 @@ jobs:
         run: pnpm build
 
       - name: Add .nojekyll file
-        run: touch ./build/.nojekyll
+        run: touch ./static/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
