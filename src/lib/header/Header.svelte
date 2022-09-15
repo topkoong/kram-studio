@@ -49,7 +49,7 @@
 					? 'underline underline-offset-8 decoration-4 decoration-[#71CC00]'
 					: ''} text-sm md:text-lg mx-2"
 			>
-				<a href="{base}/contact-us">Contact Us</a>
+				<a href="{base}/contact-us">Contact</a>
 			</li>
 		</ul>
 	</nav>

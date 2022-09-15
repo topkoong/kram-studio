@@ -1,4 +1,5 @@
 <script lang="ts">
+	/*global google*/
 	// import Counter from '$lib/Counter.svelte';
 	import LineIcon from '$lib/icons/line.svg';
 	import FacebookIcon from '$lib/icons/facebook.svg';
@@ -9,6 +10,9 @@
 	import { browser } from '$app/environment';
 
 	const google = window.google;
+	let map: google.maps.Map;
+	let container: any;
+	const center: google.maps.LatLngLiteral = { lat: 13.7722548, lng: 100.6813562 };
 	function getMobileOperatingSystem() {
 		if (browser) {
 			const userAgent = navigator.userAgent || navigator.vendor;
@@ -29,30 +33,25 @@
 			return 'unknown';
 		}
 	}
-
-	let map: google.maps.Map;
-	let container: any;
-	const center: google.maps.LatLngLiteral = { lat: 13.7722548, lng: 100.6813562 };
-
-	function initMap(): void {
-		map = new google.maps.Map(container, {
-			center,
-			zoom: 21
-		});
-		new google.maps.Marker({
-			position: { lat: 13.7722548, lng: 100.6813562 },
-			map: map,
-			label: {
-				text: 'Kram Studio',
-				fontFamily: 'eqTH',
-				color: 'black',
-				fontSize: '24px',
-				className: 'text-lg md:text-2xl font-bold text-center uppercase'
-			}
-		});
-	}
-
 	onMount(() => {
+		function initMap(): void {
+			map = new google.maps.Map(container, {
+				center,
+				zoom: 21
+			});
+			new google.maps.Marker({
+				position: { lat: 13.7722548, lng: 100.6813562 },
+				map: map,
+				label: {
+					text: 'Kram Studio',
+					fontFamily: 'eqTH',
+					color: 'black',
+					fontSize: '24px',
+					className: 'text-lg md:text-2xl font-bold text-center uppercase'
+				}
+			});
+		}
+
 		initMap();
 	});
 </script>
@@ -84,11 +83,8 @@
 	/>
 </svelte:head>
 
-<!-- <section
-	class="flex flex-col items-center justify-center mt-4 lg:mt-6 mb-10 lg:mb-12 max-w-[1440px] py-10 lg:py-20 lg:mx-10"
-> -->
 <!-- ref: https://resonatemusic.ca/recording-studio/recording-studio-services/ -->
-<section class="container">
+<section class="container my-8 h-full">
 	<h1 class="text-lg md:text-2xl font-bold text-center my-8 uppercase">Stay in the loop</h1>
 </section>
 

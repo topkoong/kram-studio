@@ -38,7 +38,7 @@
 		setTimeout(() => {
 			loaded = true;
 			randomTextEffect.reset();
-		}, 3000);
+		}, 25000);
 	}
 </script>
 
@@ -64,12 +64,12 @@
 </svelte:head>
 
 <section class="container">
-	<div class="flex justify-center">
-		<img src="{base}/images/ape-shit.jpeg" alt="Welcome" />
+	<div class="flex justify-center w-full my-8">
+		<img class="w-48 sm:w-56" src="{base}/images/ape-shit.jpeg" alt="Welcome" />
 	</div>
 	<div class="flex flex-col justify-center">
 		<h1
-			class="text-xl md:text-3xl font-bold text-center h-28 md:h-32 text-yellow-300"
+			class="text-base sm:text-large md:text-xl font-bold text-center h-28 md:h-32 text-yellow-300"
 			in:fly={{ y: 200, duration: 500 }}
 			out:fade
 		>
@@ -80,7 +80,7 @@
 			{/if}
 		</h1>
 		<button
-			class="mx-auto border border-[#71CC00] max-w-xs border-4 mt-8 px-4 py-3 text-center text-sm font-semibold uppercase text-white"
+			class="mx-auto border border-[#71CC00] max-w-xs border-4 mt-12 px-4 py-3 text-center text-sm font-semibold uppercase text-white"
 			on:click={randomizeTexts}>Get Random Quotes</button
 		>
 	</div>
