@@ -12,12 +12,15 @@ module.exports = {
 		sourceType: 'module',
 		ecmaVersion: 2020
 	},
+	rules: {
+		'@typescript-eslint/ban-ts-comment': 'off'
+	},
 	env: {
 		browser: true,
 		es2017: true,
 		node: true
+	},
+	globals: {
+		google: 'readonly'
 	}
-	// globals: {
-	// 	google: 'readonly'
-	// }
 };

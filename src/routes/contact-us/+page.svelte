@@ -7,8 +7,7 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	/*global google*/
-	const google = window.google;
+	// @ts-ignore
 	let map: google.maps.Map;
 	let container: any;
 	const center: google.maps.LatLngLiteral = { lat: 13.7722548, lng: 100.6813562 };
@@ -55,7 +54,6 @@
 	});
 </script>
 
-/*global google*/
 <svelte:head>
 	<title>KRAM Studio - We help grow your business rapidly</title>
 	<meta
