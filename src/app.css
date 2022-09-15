@@ -15,7 +15,7 @@ body {
 
 @font-face {
 	font-family: 'EQ TH';
-	src: url('./fonts/eq_th_blk.fee.woff2') format('woff2');
+	src: url('/fonts/eq_th_blk.fee.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
