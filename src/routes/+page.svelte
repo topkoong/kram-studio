@@ -24,7 +24,7 @@
 	const randomTextEffect = tweened({ values: texts, duration: 10000 });
 
 	let loaded = false;
-	let randomText: string = '';
+	let randomText = '';
 
 	onMount(() => {
 		randomizeTexts();
