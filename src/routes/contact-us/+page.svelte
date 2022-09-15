@@ -1,5 +1,4 @@
 <script lang="ts">
-	/*global google*/
 	// import Counter from '$lib/Counter.svelte';
 	import LineIcon from '$lib/icons/line.svg';
 	import FacebookIcon from '$lib/icons/facebook.svg';
@@ -8,7 +7,7 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-
+	/*global google*/
 	const google = window.google;
 	let map: google.maps.Map;
 	let container: any;
@@ -56,6 +55,7 @@
 	});
 </script>
 
+/*global google*/
 <svelte:head>
 	<title>KRAM Studio - We help grow your business rapidly</title>
 	<meta

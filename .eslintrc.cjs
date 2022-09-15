@@ -16,8 +16,8 @@ module.exports = {
 		browser: true,
 		es2017: true,
 		node: true
-	},
-	globals: {
-		google: 'readonly'
 	}
+	// globals: {
+	// 	google: 'readonly'
+	// }
 };
