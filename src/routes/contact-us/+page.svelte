@@ -88,11 +88,6 @@
 		content="Kram Studio Services - 
 	RECORDING, MIXING & MASTERING, EDITING, SONGWRITING & COMPOSITION, MIDI PROGRAMMING, JINGLES, AUDIO LOGOS & RADIO ADS"
 	/>
-	<!-- <script
-		async
-		defer
-		src="https://maps.googleapis.com/maps/api/js?key={import.meta.env
-			.VITE_GOOGLE_MAP_API_KEY}"></script> -->
 
 	<meta
 		property="og:title"
@@ -115,7 +110,6 @@
 	{/if}
 </section>
 <section class="container my-8 overflow-hidden">
-	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
 	<ul class="flex justify-center">
 		<li class=""><LineIcon class="w-8 h-8 mx-2" /></li>
 		<li class="">
