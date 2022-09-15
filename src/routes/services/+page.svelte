@@ -14,15 +14,23 @@
 <svelte:head>
 	<title>Kram Studio Services</title>
 	<meta
+		name="title"
+		content="Kram Studio Services - 
+	RECORDING, MIXING & MASTERING, EDITING, SONGWRITING & COMPOSITION, MIDI PROGRAMMING, JINGLES, AUDIO LOGOS & RADIO ADS"
+	/>
+	<meta
 		name="description"
 		content="Kram Studio Services - 
-	RECORDING, MIXING & MASTERING, EDITING,
-	PRODUCTION & SOUND DESIGN,
-	SONGWRITING & COMPOSITION,
-	MIDI PROGRAMMING,
-	IN-STUDIO VIDEO,
-	JINGLES, AUDIO LOGOS & RADIO ADS,
-	PODCASTS"
+		พวกเรามีทีมงาน มีประสบการณ์ในการผลิตเพลงให้องค์กร sme แบรนด์ต่างๆมากกว่า 30 เพลงที่ผ่านมา เรามีประสบการณ์ในการทำเพลงให้ ศิลปินมืออาชีพ และ ศิลปินอิสระมากมาย.."
+	/>
+
+	<meta
+		property="og:title"
+		content="พวกเรามีทีมงาน มีประสบการณ์ในการผลิตเพลงให้องค์กร sme แบรนด์ต่างๆมากกว่า 30 เพลงที่ผ่านมา เรามีประสบการณ์ในการทำเพลงให้ ศิลปินมืออาชีพ และ ศิลปินอิสระมากมาย.."
+	/>
+	<meta
+		property="og:description"
+		content="พวกเรามีทีมงาน มีประสบการณ์ในการผลิตเพลงให้องค์กร sme แบรนด์ต่างๆมากกว่า 30 เพลงที่ผ่านมา เรามีประสบการณ์ในการทำเพลงให้ ศิลปินมืออาชีพ และ ศิลปินอิสระมากมาย.."
 	/>
 </svelte:head>
 

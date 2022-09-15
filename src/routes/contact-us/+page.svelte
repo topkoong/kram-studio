@@ -7,7 +7,7 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-
+	const google = window.google;
 	function getMobileOperatingSystem() {
 		if (browser) {
 			const userAgent = navigator.userAgent || navigator.vendor;
@@ -58,7 +58,10 @@
 
 <svelte:head>
 	<title>KRAM Studio - We help grow your business rapidly</title>
-	<meta name="description" content="RECORDING, MIXING & MASTERING, EDITING" />
+	<meta
+		name="description"
+		content="คุณอยากเป็นศิลปิน เราทำฝันให้เป็นจริงได้ ด้วยทีมงานโปรดิวเซอร์จากค่ายใหญ่ ยอดวิว 100 ล้าน. ห้องอัดเสียงระดับประเทศ รับทำเพลง แต่งเพลง ทำบีทเพลง มิกซ์มาสเตอร์"
+	/>
 	<meta
 		name="title"
 		content="Kram Studio Services - 
@@ -72,11 +75,11 @@
 
 	<meta
 		property="og:title"
-		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
+		content="ทีมงานมืออาชีพ มีประสบการณ์ เครื่องดนตรีอุปกรณ์อัดเสียงคุณภาพสูง. บริการทำเพลง แต่งเพลง ห้องอัดเสียงพร้อมถ่าย MV ครบวงจร."
 	/>
 	<meta
 		property="og:description"
-		content="SONGWRITING & COMPOSITION, MIDI PROGRAMMING, RECORDING, MIXING & MASTERING, EDITING, JINGLES, AUDIO LOGOS & RADIO ADS"
+		content="ทีมงานมืออาชีพ มีประสบการณ์ เครื่องดนตรีอุปกรณ์อัดเสียงคุณภาพสูง. บริการทำเพลง แต่งเพลง ห้องอัดเสียงพร้อมถ่าย MV ครบวงจร."
 	/>
 </svelte:head>
 
