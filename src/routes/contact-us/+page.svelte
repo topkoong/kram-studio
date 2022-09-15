@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import Counter from '$lib/Counter.svelte';
 	import LineIcon from '$lib/icons/line.svg';
 	import FacebookIcon from '$lib/icons/facebook.svg';
 	import InstagramIcon from '$lib/icons/instagram.svg';
@@ -7,11 +6,8 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	/* global google */
-	// @ts-ignore
-	let map: google.maps.Map;
-	let container: any;
-	const center: google.maps.LatLngLiteral = { lat: 13.7722548, lng: 100.6813562 };
+	import { Loader } from '@googlemaps/js-api-loader';
+
 	function getMobileOperatingSystem() {
 		if (browser) {
 			const userAgent = navigator.userAgent || navigator.vendor;
@@ -32,28 +28,52 @@
 			return 'unknown';
 		}
 	}
+
+	let containerRef: HTMLElement;
+
 	onMount(() => {
-		function initMap(): void {
+		/*global google*/
+		if (browser) {
+			const google = window.google;
 			// @ts-ignore
-			map = new google.maps.Map(container, {
+			let map: google.maps.Map;
+			// @ts-ignore
+			const center: google.maps.LatLngLiteral = { lat: 13.7722548, lng: 100.6813562 };
+			const mapOptions = {
 				center,
 				zoom: 21
+			};
+			const loader = new Loader({
+				apiKey: import.meta.env.VITE_GOOGLE_MAP_API_KEY,
+				version: 'weekly',
+				libraries: ['places']
 			});
-			// @ts-ignore
-			new google.maps.Marker({
-				position: { lat: 13.7722548, lng: 100.6813562 },
-				map: map,
-				label: {
-					text: 'Kram Studio',
-					fontFamily: 'eqTH',
-					color: 'black',
-					fontSize: '24px',
-					className: 'text-lg md:text-2xl font-bold text-center uppercase'
-				}
-			});
-		}
 
-		initMap();
+			loader
+				.load()
+				.then((google) => {
+					// @ts-ignore
+					map = new google.maps.Map(containerRef, mapOptions);
+				})
+				.then(() => {
+					// @ts-ignore
+					new google.maps.Marker({
+						position: { lat: 13.7722548, lng: 100.6813562 },
+						map: map,
+						label: {
+							text: 'Kram Studio',
+							fontFamily: 'eqTH',
+							color: 'black',
+							fontSize: '24px',
+							className: 'text-lg md:text-2xl font-bold text-center uppercase'
+						}
+					});
+				})
+				.catch((e) => {
+					// do something
+					console.error(e.message);
+				});
+		}
 	});
 </script>
 
@@ -68,11 +88,11 @@
 		content="Kram Studio Services - 
 	RECORDING, MIXING & MASTERING, EDITING, SONGWRITING & COMPOSITION, MIDI PROGRAMMING, JINGLES, AUDIO LOGOS & RADIO ADS"
 	/>
-	<script
+	<!-- <script
 		async
 		defer
 		src="https://maps.googleapis.com/maps/api/js?key={import.meta.env
-			.VITE_GOOGLE_MAP_API_KEY}"></script>
+			.VITE_GOOGLE_MAP_API_KEY}"></script> -->
 
 	<meta
 		property="og:title"
@@ -90,7 +110,9 @@
 </section>
 
 <section class="container my-8 overflow-hidden h-full">
-	<div id="map" class="h-72 lg:h-96" bind:this={container} />
+	{#if browser && window}
+		<div id="map" class="h-72 lg:h-96" bind:this={containerRef} />
+	{/if}
 </section>
 <section class="container my-8 overflow-hidden">
 	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
