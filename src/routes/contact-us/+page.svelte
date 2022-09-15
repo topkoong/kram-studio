@@ -7,6 +7,7 @@
 	import MediaQuery from 'svelte-media-queries';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
+	/* global google */
 	// @ts-ignore
 	let map: google.maps.Map;
 	let container: any;
@@ -33,10 +34,12 @@
 	}
 	onMount(() => {
 		function initMap(): void {
+			// @ts-ignore
 			map = new google.maps.Map(container, {
 				center,
 				zoom: 21
 			});
+			// @ts-ignore
 			new google.maps.Marker({
 				position: { lat: 13.7722548, lng: 100.6813562 },
 				map: map,
@@ -87,7 +90,7 @@
 </section>
 
 <section class="container my-8 overflow-hidden h-full">
-	<div id="map" class="h-96" bind:this={container} />
+	<div id="map" class="h-72 lg:h-96" bind:this={container} />
 </section>
 <section class="container my-8 overflow-hidden">
 	<!-- <h1 class="text-lg md:text-2xl font-bold text-center my-8">Social Media</h1> -->
