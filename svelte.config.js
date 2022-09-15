@@ -15,7 +15,9 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			fallback: '200.html'
+		}),
 		paths: {
 			// change below to your repo name
 			base: dev ? '' : '/kram-studio'
