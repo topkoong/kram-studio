@@ -21,7 +21,8 @@ const config = {
 		paths: {
 			// change below to your repo name
 			base: dev ? '' : '/kram-studio'
-		}
+		},
+		trailingSlash: 'always'
 	}
 };
 
